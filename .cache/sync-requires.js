@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-index-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/index.tsx"))),
   "component---src-pages-orders-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/orders.tsx"))),
   "component---src-pages-pizzas-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/pizzas.tsx"))),
-  "component---src-pages-slicemasters-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/slicemasters.tsx")))
+  "component---src-pages-slicemasters-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/slicemasters.tsx"))),
+  "component---src-templates-pizza-tsx": hot(preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/templates/Pizza.tsx")))
 }
 

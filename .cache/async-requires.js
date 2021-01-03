@@ -8,6 +8,7 @@ exports.components = {
   "component---src-pages-index-tsx": () => import("./../../../src/pages/index.tsx" /* webpackChunkName: "component---src-pages-index-tsx" */),
   "component---src-pages-orders-tsx": () => import("./../../../src/pages/orders.tsx" /* webpackChunkName: "component---src-pages-orders-tsx" */),
   "component---src-pages-pizzas-tsx": () => import("./../../../src/pages/pizzas.tsx" /* webpackChunkName: "component---src-pages-pizzas-tsx" */),
-  "component---src-pages-slicemasters-tsx": () => import("./../../../src/pages/slicemasters.tsx" /* webpackChunkName: "component---src-pages-slicemasters-tsx" */)
+  "component---src-pages-slicemasters-tsx": () => import("./../../../src/pages/slicemasters.tsx" /* webpackChunkName: "component---src-pages-slicemasters-tsx" */),
+  "component---src-templates-pizza-tsx": () => import("./../../../src/templates/Pizza.tsx" /* webpackChunkName: "component---src-templates-pizza-tsx" */)
 }
 
