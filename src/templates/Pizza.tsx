@@ -2,9 +2,9 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 const SinglePizzaPage = ({ data: { pizza } }) => {
-  console.log({ pizza });
   const PizzaGrid = styled.div`
     display: grid;
     grid-gap: 2rem;
@@ -12,6 +12,9 @@ const SinglePizzaPage = ({ data: { pizza } }) => {
   `;
   return (
     <PizzaGrid>
+      <Helmet>
+        <title>Yo</title>
+      </Helmet>
       <Img fluid={pizza.image.asset.fluid} />
       <div>
         <h2 className="mark">{pizza.name}</h2>
