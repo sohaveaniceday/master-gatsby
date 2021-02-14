@@ -2,6 +2,9 @@ var plugins = [{
       plugin: require('/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
       options: {"plugins":[],"projectId":"ojt6blen","dataset":"production","watchMode":true,"token":"skXBQwiGqz89L9I8AcvJsak8SKIM4goNXObEzhc78Pj5K8jfqOOLhrvx8P7vUUZMYmsKfhkccThcEB7encNQk9zXke0JKVWnMIPzjx6dDrFCCHrx5Jl5E6vcKDmHfLDERHQcfR2lNlxU999hcBWo4hqAr3f307D6Cr4unbCUO3mRodCNaBgR"},
     },{
