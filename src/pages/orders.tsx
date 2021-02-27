@@ -5,6 +5,10 @@ import SEO from '../components/SEO';
 import useForm from '../utils/useForms';
 import calculatePizzaPrice from '../utils/calculatePizzaPrice';
 import formatMoney from '../utils/formatMoney';
+import usePizza from '../utils/usePizza';
+import PizzaOrder from '../components/PizzaOrder';
+import MenuItemStyles from '../styles/MenuItemStyles';
+import calculateOrderTotal from '../utils/orderTotal';
 
 const OrderPage = ({ data }) => {
   const { values, updateValues } = useForm({
@@ -12,6 +16,10 @@ const OrderPage = ({ data }) => {
     email: '',
   });
   const pizzas = data.pizzas.nodes;
+  const { order, addToOrder, removeFromOrder } = usePizza({
+    pizzas,
+    inputs: values,
+  });
   return (
     <>
       <SEO title="Order pizzs" />
@@ -38,7 +46,7 @@ const OrderPage = ({ data }) => {
         <fieldset>
           <legend>Menu</legend>
           {pizzas.map((pizza) => (
-            <div key={pizza.id}>
+            <MenuItemStyles key={pizza.id}>
               <Img
                 width="50"
                 height="50"
@@ -50,16 +58,32 @@ const OrderPage = ({ data }) => {
               </div>
               <div>
                 {['S', 'M', 'L'].map((size) => (
-                  <button type="button">
+                  <button
+                    type="button"
+                    key={size}
+                    onClick={() => addToOrder({ id: pizza.id, size })}
+                  >
                     {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
                   </button>
                 ))}
               </div>
-            </div>
+            </MenuItemStyles>
           ))}
         </fieldset>
+        <fieldset className="order">
+          <legend>
+            <PizzaOrder
+              order={order}
+              removeFromOrder={removeFromOrder}
+              pizzas={pizzas}
+            />
+          </legend>
+        </fieldset>
         <fieldset>
-          <legend>Your Order</legend>
+          <h3>
+            Your total is {formatMoney(calculateOrderTotal(order, pizzas))}
+          </h3>
+          <button type="submit">Order ahead</button>
         </fieldset>
       </form>
     </>
