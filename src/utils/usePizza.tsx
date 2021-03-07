@@ -26,12 +26,13 @@ const usePizza = ({ pizzas, values }: any) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setMessage(null);
+    // setMessage(null);
     const body = {
       order: attachNamesAndPrices(order, pizzas),
       total: formatMoney(calculateOrderTotal(order, pizzas)),
       name: values.name,
       email: values.email,
+      maple: values.maple,
     };
     console.log('body', body);
     const res = await fetch(
@@ -40,8 +41,8 @@ const usePizza = ({ pizzas, values }: any) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          body: JSON.stringify(body),
         },
+        body: JSON.stringify(body),
       }
     );
     const text = JSON.parse(await res.text());

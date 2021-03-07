@@ -25,7 +25,7 @@ const OrderStyles = styled.form`
       height: 600px;
     }
   }
-  .mapleSyrup {
+  .maple {
     display: none;
   }
   @media (max-width: 900px) {
