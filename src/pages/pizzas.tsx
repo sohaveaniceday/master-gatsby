@@ -12,7 +12,7 @@ const PizzasPage = ({ data, pageContext }) => {
         title={
           pageContext.topping
             ? `Pizza with ${pageContext.topping}`
-            : 'All Pizzas'
+            : 'All Pizzas!'
         }
       />
       <ToppingsFilter activeTopping={pageContext.topping} />
