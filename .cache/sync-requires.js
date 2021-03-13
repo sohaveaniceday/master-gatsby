@@ -5,7 +5,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": (preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/.cache/dev-404-page.js"))),
   "component---src-pages-404-tsx": (preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/404.tsx"))),
   "component---src-pages-beers-tsx": (preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/beers.tsx"))),
   "component---src-pages-index-tsx": (preferDefault(require("/Users/richardturner/Development/tutorials/master-gatsby-working/gatsby/src/pages/index.tsx"))),

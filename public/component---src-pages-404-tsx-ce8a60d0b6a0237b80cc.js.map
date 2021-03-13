@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.tsx"],"names":["FourOhFour"],"mappings":"6FAAA,gCAIeA,UAFI,kBAAM","file":"component---src-pages-404-tsx-ce8a60d0b6a0237b80cc.js","sourcesContent":["import React from 'react';\n\nconst FourOhFour = () => <p>Hey this page doesn't exist</p>;\n\nexport default FourOhFour;\n"],"sourceRoot":""}
